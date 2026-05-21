@@ -88,7 +88,9 @@ Scrublet was run in a separate conda environment using Python 3.10. The main Pyt
 Example conda setup for Scrublet:
 
 conda create -n scrublet_env python=3.10 -y
+
 conda activate scrublet_env
+
 conda install -c conda-forge -c bioconda scrublet -y
 
 ## Reproducibility
