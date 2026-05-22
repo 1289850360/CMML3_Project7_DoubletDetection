@@ -61,6 +61,37 @@ Main outputs include:
 - Figure2_benchmark_metrics_3methods.png
 - Supp_score_distributions_3methods.png
 
+### 06_R_downstream_after_doublet_removal.R
+
+This script performs an additional downstream check after doublet detection. It removes predicted doublets from the dataset using DoubletFinder, Scrublet and scDblFinder predictions, then reruns Seurat preprocessing, clustering and UMAP visualisation for each filtered dataset.
+
+It also generates a marker-gene DotPlot after scDblFinder filtering to check whether major PBMC marker-gene patterns are retained after doublet removal.
+
+Main outputs include:
+
+- downstream_doublet_removal_summary.csv
+- FigureS3_downstream_umap_after_doublet_removal.png
+- FigureS3_downstream_umap_after_doublet_removal.pdf
+- FigureS4_marker_dotplot_after_scDblFinder_removal.png
+- FigureS4_marker_dotplot_after_scDblFinder_removal.pdf
+- seurat_after_DoubletFinder_removal.rds
+- seurat_after_Scrublet_removal.rds
+- seurat_after_scDblFinder_removal.rds
+
+The downstream analysis is intended as a supplementary check rather than a full differential-expression analysis. It examines whether the overall PBMC clustering structure and major marker-gene patterns are retained after predicted doublet removal.
+
+## Main outputs used in the report
+
+The main report and supplementary materials use the following output files:
+
+- final_benchmark_metrics_3methods.csv
+- confusion_matrix_summary.csv
+- Figure1_UMAP_4methods.png
+- Supp_score_distributions_3methods.png
+- FigureS3_downstream_umap_after_doublet_removal.png
+- FigureS4_marker_dotplot_after_scDblFinder_removal.png
+- downstream_doublet_removal_summary.csv
+
 ## Software environment
 
 The R analysis was run in RStudio. The main R packages used were:
